@@ -1,0 +1,50 @@
+/**
+ * Styling
+ *
+ * This file contains the base styling for the site.
+ *
+ */
+
+@import 'vars';
+@import 'functions';
+
+@import './reset';
+@import './fonts';
+@import './icons';
+
+* {
+  box-sizing: inherit;
+}
+
+html {
+  box-sizing: border-box;
+}
+
+body {
+  font: 400 getFontSize(0) 'Cabin', 'Century Gothic', sans-serif;
+  color: map-get($colors, emperor);
+}
+
+a {
+  color: map-get($colors, tussock);
+  text-decoration: none;
+  transition: color 250ms;
+
+  &:hover {
+    color: darken(map-get($colors, tussock), 15%);
+  }
+
+  &.icon-link {
+    display: inline-block;
+    margin-left: 0.5em;
+    font-size: 0.7em;
+    transform: rotate(-135deg);
+  }
+}
+
+#opencollective-banner h1 {
+  color: map-get($colors, emperor);
+  font: 300 getFontSize(3) 'Open Sans', 'Century Gothic', sans-serif;
+}
+
+@import './markdown';
