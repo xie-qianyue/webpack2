@@ -227,7 +227,7 @@ It specific how to handle changes to specific dependencies.
 So in this case, `module.hot` will fire the `render` method ONLY
 when `src/components/App.js` changes. Note that would also include when the
 dependencies of `App.js` change -
-so the `render` method will file not just for changes made directly to the
+so the `render` method will be fired not just for changes made directly to the
 source of `App.js`, but also changes made to `App.css`, since `App.css`
 is included in `App.js`.
 
